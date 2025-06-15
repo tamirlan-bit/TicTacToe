@@ -30,7 +30,7 @@ class EndGame
 
   def check_game_end(symbol, end_game, play)
   if win? == true
-    puts "#{symbol} won \\ (•◡•)/ ! Game Over!\n\n"
+    puts "#{symbol} won \\(•◡•)/ ! Game Over!\n\n"
     play.replay
   elsif draw?
     puts "It's a Draw! (；一_一)\nGame Over!\n\n"
