@@ -27,5 +27,16 @@ class EndGame
     return true if val1 != "_" && val1 == val2 && val2 == val3
     end
   end
+
+  def check_game_end(symbol, end_game, play)
+  if win? == true
+    puts "#{symbol} won \\ (•◡•)/ ! Game Over!\n\n"
+    play.replay
+  elsif draw?
+    puts "It's a Draw! (；一_一)\nGame Over!\n\n"
+    play.replay
+  end
+end
+
   false
 end

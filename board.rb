@@ -2,13 +2,18 @@ class Board
   attr_accessor :cell
 
   def initialize
-    puts 'Tic Tac Toe Game Start!' 
-    @cell = ["","1","2","3","4","5","6","7","8","9"]
-    display
-    reset    
+    reset 
+    puts <<~Board
+       ___ ___ ___ 
+      |_7_|_8_|_9_|
+      |_4_|_5_|_6_|
+      |_1_|_2_|_3_|
+
+    Board
   end
 
   def reset
+  clear_screen
   @cell = ["","_","_","_","_","_","_","_","_","_"]
   end
 
@@ -25,5 +30,9 @@ Board
   def make_move(index, symbol)
   @cell[index] = symbol
   end
+
+def clear_screen
+    system("clear") || system("cls")
+end
 
 end
